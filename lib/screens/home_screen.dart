@@ -1,3 +1,4 @@
+import 'package:daily_exercises/screens/details_screen.dart';
 import 'package:daily_exercises/widgets/bottom_nav_bar.dart';
 import 'package:daily_exercises/widgets/category_card.dart';
 import 'package:daily_exercises/widgets/search_bar.dart';
@@ -46,7 +47,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    "Good Morning \nZendy",
+                    "Good Morning,\nZendy",
                     style: Theme.of(context)
                         .textTheme
                         .headline4!
@@ -61,9 +62,16 @@ class HomeScreen extends StatelessWidget {
                       mainAxisSpacing: 20,
                       children: <Widget>[
                         CategoryCard(
-                          title: "Diet Recommendation",
+                          title: "Diet Recommend",
                           svgSrc: "assets/icons/Hamburger.svg",
-                          press: () {},
+                          press: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) {
+                                return const DetailsScreen();
+                              }),
+                            );
+                          },
                         ),
                         CategoryCard(
                           title: "Kegel Exercises",
@@ -73,12 +81,26 @@ class HomeScreen extends StatelessWidget {
                         CategoryCard(
                           title: "Meditation",
                           svgSrc: "assets/icons/Meditation.svg",
-                          press: () {},
+                          press: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) {
+                                return const DetailsScreen();
+                              }),
+                            );
+                          },
                         ),
                         CategoryCard(
                           title: "Yoga",
                           svgSrc: "assets/icons/yoga.svg",
-                          press: () {},
+                          press: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) {
+                                return const DetailsScreen();
+                              }),
+                            );
+                          },
                         ),
                       ],
                     ),
